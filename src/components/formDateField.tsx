@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-interface FormTextFieldProps {
+interface FormDateFieldProps {
   IdAndName: string;
   label: string;
   required: boolean;
 }
-const FormTextField = (props: FormTextFieldProps) => {
+
+const FormDateField = (props: FormDateFieldProps) => {
   const [value, setValue] = useState("");
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,7 +19,7 @@ const FormTextField = (props: FormTextFieldProps) => {
       <input
         id={props.IdAndName}
         name={props.IdAndName}
-        type="text"
+        type="date"
         className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
         required={props.required}
         value={value}
@@ -28,4 +29,4 @@ const FormTextField = (props: FormTextFieldProps) => {
   );
 };
 
-export default FormTextField;
+export default FormDateField;

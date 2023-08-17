@@ -1,11 +1,9 @@
-import { useState } from "react";
-
-interface FormToggleField {
+interface FormToggleFieldProps {
   IdAndName: string;
   label: string;
 }
 
-const FormToggleField = (props: FormToggleField) => {
+const FormToggleField = (props: FormToggleFieldProps) => {
   return (
     <div className="md:col-span-5">
       <label>{props.label}</label>
