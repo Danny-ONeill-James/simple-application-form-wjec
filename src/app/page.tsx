@@ -1,7 +1,7 @@
-import FormFieldsGroup from "./components/formFieldsGroup";
-import FormSection from "./components/formSection";
-import FormSideBar from "./components/formSideBar";
-import FormTextField from "./components/formTextField";
+import FormFieldsGroup from "../components/formFieldsGroup";
+import FormSection from "../components/formSection";
+import FormSideBar from "../components/formSideBar";
+import FormTextField from "../components/formTextField";
 
 export default function Home() {
   return (
