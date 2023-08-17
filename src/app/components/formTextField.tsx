@@ -6,7 +6,7 @@ interface FormTextField {
 
 const FormTextField = (props: FormTextField) => {
   return (
-    <div className="md:col-span-4">
+    <div className="md:col-span-5">
       <label htmlFor={props.IdAndName}>{props.label}</label>
       <input
         id={props.IdAndName}
