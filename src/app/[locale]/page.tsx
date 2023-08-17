@@ -1,15 +1,17 @@
-import FormFieldsGroup from "./components/formFieldsGroup";
-import FormSection from "./components/formSection";
-import FormSideBar from "./components/formSideBar";
-import FormTextField from "./components/formTextField";
+import FormFieldsGroup from "@/components/formFieldsGroup";
+import FormSection from "@/components/formSection";
+import FormSideBar from "@/components/formSideBar";
+import FormTextField from "@/components/formTextField";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("IndexPage");
   return (
     <main className="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
       <div className="container max-w-screen-lg mx-auto">
         <form>
           <h2 className="font-semibold text-xl text-gray-600">
-            Application Form
+            {t("formTitle")}
           </h2>
           <p className="text-gray-500 mb-6">
             This is an example form for WJEC.
