@@ -1,11 +1,9 @@
-"use client";
-import FormDateField from "@/components/formDateField";
-import FormFieldsGroup from "@/components/formFieldsGroup";
-import FormSection from "@/components/formSection";
-import FormSideBar from "@/components/formSideBar";
-import FormTextField from "@/components/formTextField";
-import FormTextareaField from "@/components/formTextareaField";
-import FormToggleField from "@/components/formToggleField";
+import FormFieldsGroup from "@/components/form/formFieldsGroup";
+import FormSection from "@/components/form/formSection";
+import FormSideBar from "@/components/form/formSideBar";
+import FormTextField from "@/components/form/formTextField";
+import FormTextareaField from "@/components/form/formTextareaField";
+import FormToggleField from "@/components/form/formToggleField";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
