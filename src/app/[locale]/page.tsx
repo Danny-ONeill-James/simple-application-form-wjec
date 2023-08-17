@@ -54,7 +54,53 @@ export default function Home() {
               title={t("form.section.personalDetails.title")}
               paragraph={t("form.section.personalDetails.description")}
             />
-            <FormFieldsGroup></FormFieldsGroup>
+            <FormFieldsGroup>
+              <FormTextField
+                IdAndName="title"
+                label={t("form.section.personalDetails.questions.title")}
+                required={true}
+              />
+              <FormTextField
+                IdAndName="forenames"
+                label={t("form.section.personalDetails.questions.forenames")}
+                required={true}
+              />
+              <FormTextField
+                IdAndName="surname"
+                label={t("form.section.personalDetails.questions.surname")}
+                required={true}
+              />
+              <FormTextField
+                IdAndName="address"
+                label={t("form.section.personalDetails.questions.address")}
+                required={true}
+              />
+              <FormTextField
+                IdAndName="postCode"
+                label={t("form.section.personalDetails.questions.postCode")}
+                required={true}
+              />
+              <FormTextField
+                IdAndName="mobile"
+                label={t("form.section.personalDetails.questions.mobile")}
+                required={true}
+              />
+              <FormTextField
+                IdAndName="home"
+                label={t("form.section.personalDetails.questions.home")}
+                required={false}
+              />
+              <FormTextField
+                IdAndName="work"
+                label={t("form.section.personalDetails.questions.work")}
+                required={false}
+              />
+              <FormTextField
+                IdAndName="email"
+                label={t("form.section.personalDetails.questions.email")}
+                required={true}
+              />
+            </FormFieldsGroup>
           </FormSection>
           <FormSection>
             <FormSideBar
