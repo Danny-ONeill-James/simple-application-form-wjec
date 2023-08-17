@@ -1,7 +1,84 @@
 {
   "IndexPage": {
     "title": "Cais am gyflogaeth",
-    "formTitle": "Ffurflen Gais"
+    "form": {
+      "title": "Ffurflen Gais",
+      "description": "Dyma enghraifft o ffurflen gais ar gyfer CBAC.",
+      "section": {
+        "role": {
+          "title": "Rôl",
+          "description": "Manylion y swydd yr ydych yn gwneud cais amdani.",
+          "questions": { "position": "Swydd y ceisir amdani" }
+        },
+        "eligibility": {
+          "title": "Cymhwysedd",
+          "description": "Eich cymhwyster i weithio i CBAC.",
+          "questions": {
+            "entitled": "A oes gennych hawl cyfreithiol ar hyn o bryd i weithio yn y wlad lle mae'r swydd wedi'i lleoli?",
+            "detail": "Os yn berthnasol, rhowch fanylion unrhyw gyfyngiadau - hyd y fisa gwaith, math o waith ac ati."
+          }
+        },
+        "personalDetails": {
+          "title": "Manylion personol",
+          "description": "Manylion eich manylion personol.",
+          "questions": {
+            "title": "Teitl",
+            "forenames": "Enwau Cyntaf",
+            "surname": "Cyfenw",
+            "address": "Cyfeiriad",
+            "postCode": "Côd Post",
+            "mobile": "Rhif ffôn Symudol",
+            "home": "Rhif Cartref",
+            "work": "Rhif Gwaith",
+            "email": "Cyfeiriad Ebost"
+          }
+        },
+        "employment": {
+          "title": "Cyflogaeth",
+          "description": "Eich hanes cyflogaeth (Rhestrwch yn y drefn gan ddechrau gyda'r mwyaf diweddar)."
+        },
+        "education": {
+          "title": "Addysg a Chymwysterau",
+          "description": "Eich addysg ac unrhyw gymwysterau sydd gennych (Mewn trefn gronolegol)."
+        },
+        "practicalSkills": {
+          "title": "Sgiliau Ymarferol",
+          "description": "Gan gynnwys sgiliau TG, sgiliau iaith ac ati."
+        },
+        "statement": {
+          "title": "Datganiad",
+          "description": "Datganiad i gefnogi eich cais."
+        },
+        "interests": {
+          "title": "Diddordebau",
+          "description": "Ychydig amdanoch chi'ch hun."
+        },
+        "references": {
+          "title": "References",
+          "description": "Rhowch fanylion cyswllt llawn ar gyfer eich dau gyfnod olaf o gyflogaeth. Dylai tystlythyrau a ddarperir fod naill ai gan yr adran Adnoddau Dynol (lle bo modd) neu Uwch Reolwr."
+        },
+        "other": {
+          "title": "Arall",
+          "description": "Ychydig o fanylion."
+        },
+        "conflict": {
+          "title": "Gwrthdaro Buddiannau",
+          "description": "Unrhyw fanylion am wrthdaro buddiannau."
+        },
+        "convictions": {
+          "title": "Euogfarnau Troseddol",
+          "description": "Unrhyw fanylion am euogfarnau troseddol."
+        },
+        "dataProtection": {
+          "title": "Diogelu Data",
+          "description": "Darllenwch y rhan hon yn llawn."
+        },
+        "declaration": {
+          "title": "Datganiad",
+          "description": "Bydd teipio'ch enw yr un mor rhwymol â'ch llofnod."
+        }
+      }
+    }
   },
   "LocaleLayout": {
     "title": "CBAC"
