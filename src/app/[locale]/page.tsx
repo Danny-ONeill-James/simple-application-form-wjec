@@ -1,11 +1,19 @@
+"use client";
+
 import FormFieldsGroup from "@/components/formFieldsGroup";
 import FormSection from "@/components/formSection";
 import FormSideBar from "@/components/formSideBar";
 import FormTextField from "@/components/formTextField";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 export default function Home() {
   const t = useTranslations("IndexPage");
+
+  function handleChange(event: any) {
+    console.log(event.target.value);
+  }
+
   return (
     <main className="p-6 bg-gray-100  items-center justify-center">
       <div className="container max-w-screen-lg mx-auto">
