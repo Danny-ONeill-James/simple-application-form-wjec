@@ -6,8 +6,6 @@ interface FormToggleField {
 }
 
 const FormToggleField = (props: FormToggleField) => {
-  const [value, setValue] = useState("");
-
   return (
     <div className="md:col-span-5">
       <label>{props.label}</label>
@@ -18,7 +16,6 @@ const FormToggleField = (props: FormToggleField) => {
             id={props.IdAndName + "1"}
             name={props.IdAndName}
             className="h-5 w-5"
-            value={value}
           />
           <label
             htmlFor={props.IdAndName + "1"}
@@ -33,7 +30,6 @@ const FormToggleField = (props: FormToggleField) => {
             name={props.IdAndName}
             id={props.IdAndName + "2"}
             className="h-5 w-5"
-            value={value}
           />
           <label
             htmlFor={props.IdAndName + "2"}
