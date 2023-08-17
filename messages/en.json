@@ -1,0 +1,86 @@
+{
+  "IndexPage": {
+    "title": "Application for employment",
+    "form": {
+      "title": "Application Form",
+      "description": "This is an example application form for WJEC.",
+      "section": {
+        "role": {
+          "title": "Role",
+          "description": "Details on the position you are applying for.",
+          "questions": { "position": "Position applied for" }
+        },
+        "eligibility": {
+          "title": "Eligibility",
+          "description": "Your eligibility to work for WJEC.",
+          "questions": {
+            "entitled": "Are you currently legally entitled to work in the country where the job is based?",
+            "detail": "If applicable, please detail any restrictions - length of work visa, type of work etc."
+          }
+        },
+        "personalDetails": {
+          "title": "Personal Details",
+          "description": "Your dersonal details.",
+          "questions": {
+            "title": "Title",
+            "forenames": "Forenames",
+            "surname": "Surname",
+            "address": "Address",
+            "postCode": "Post Code",
+            "mobile": "Mobile Number",
+            "home": "Home Number",
+            "work": "Work Number",
+            "email": "E-Mail Address"
+          }
+        },
+        "employment": {
+          "title": "Employment",
+          "description": "Your employment history (Please list in order starting with most recent)."
+        },
+        "education": {
+          "title": "Education and Qualifications",
+          "description": "Your education and any qualifications you hold (In chronological order)."
+        },
+        "practicalSkills": {
+          "title": "Practical Skills",
+          "description": "Including IT skills, language skills etc."
+        },
+        "statement": {
+          "title": "Statement",
+          "description": "A statement in support of your applcication."
+        },
+        "interests": {
+          "title": "Interests",
+          "description": "A little about yourself."
+        },
+        "references": {
+          "title": "References",
+          "description": "Please provide full reference contact details for your last two periods of employment. References provided should either be from the Human Resources department (where possible) or a Senior Manager."
+        },
+        "other": {
+          "title": "Other",
+          "description": "A few little details."
+        },
+        "conflict": {
+          "title": "Conflict of Interest",
+          "description": "Any details of conflict of interest."
+        },
+        "convictions": {
+          "title": "Criminal Convictions",
+          "description": "Any details of criminal convictions."
+        },
+        "dataProtection": {
+          "title": "Data Protection",
+          "description": "Please read this part in full."
+        },
+        "declaration": {
+          "title": "Declaration",
+          "description": "Typing your name will be taken as being as binding as your signature."
+        }
+      }
+    }
+  },
+  "LocaleLayout": {
+    "title": "WJEC"
+  }
+}
