@@ -1,3 +1,4 @@
+"use client";
 import FormFieldsGroup from "@/components/form/formFieldsGroup";
 import FormSection from "@/components/form/formSection";
 import FormSideBar from "@/components/form/formSideBar";
