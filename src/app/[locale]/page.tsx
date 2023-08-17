@@ -4,6 +4,7 @@ import FormFieldsGroup from "@/components/formFieldsGroup";
 import FormSection from "@/components/formSection";
 import FormSideBar from "@/components/formSideBar";
 import FormTextField from "@/components/formTextField";
+import FormToggleField from "@/components/formToggleField";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
@@ -37,10 +38,9 @@ export default function Home() {
               paragraph={t("form.section.eligibility.description")}
             />
             <FormFieldsGroup>
-              <FormTextField
+              <FormToggleField
                 IdAndName="entitled"
                 label={t("form.section.eligibility.questions.entitled")}
-                required={true}
               />
               <FormTextField
                 IdAndName="detail"
