@@ -80,6 +80,10 @@
       }
     }
   },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, cy {Welsh} en {English} other {Unknown}}"
+  },
   "LocaleLayout": {
     "title": "WJEC"
   }

@@ -5,6 +5,7 @@ import FormSideBar from "@/components/form/formSideBar";
 import FormTextField from "@/components/form/formTextField";
 import FormTextareaField from "@/components/form/formTextareaField";
 import FormToggleField from "@/components/form/formToggleField";
+import LocaleSwitcher from "@/components/localeSwitcher";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
@@ -13,11 +14,18 @@ export default function Home() {
   return (
     <main className="p-6 bg-gray-100  items-center justify-center">
       <div className="container max-w-screen-lg mx-auto">
+        <div className="flow-root">
+          <div className="float-left">
+            <h2 className="font-semibold text-xl text-gray-600">
+              {t("form.title")}
+            </h2>
+            <p className="text-gray-500 mb-6">{t("form.description")}</p>
+          </div>
+          <div className="float-right">
+            <LocaleSwitcher />
+          </div>
+        </div>
         <form>
-          <h2 className="font-semibold text-xl text-gray-600">
-            {t("form.title")}
-          </h2>
-          <p className="text-gray-500 mb-6">{t("form.description")}</p>
           <FormSection>
             <FormSideBar
               title={t("form.section.role.title")}
