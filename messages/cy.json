@@ -82,5 +82,9 @@
   },
   "LocaleLayout": {
     "title": "CBAC"
+  },
+  "LocaleSwitcher": {
+    "label": "Newid iaith",
+    "locale": "{locale, select, cy {Cymraeg} en {Saesneg} other {Anhysbys}}"
   }
 }
