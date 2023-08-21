@@ -39,7 +39,7 @@ export async function generateMetadata({ params: { locale } }: Props) {
 }
 
 export const metadata: Metadata = {
-  title: "Simple Application Form - WJEC",
+  title: "Simple Application Form",
   description:
     "A simple form to provide the data required to apply for a position in an easy way",
 };
