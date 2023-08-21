@@ -56,6 +56,14 @@ export default function Home() {
 
   const onSubmit: SubmitHandler<FormSchema> = async (data: FormSchema) => {
     console.log("Submitted Data: ", data);
+    const JSONdata = JSON.stringify(data);
+    window.location.href =
+      "mailto:" +
+      data.personalDetailsEmail +
+      "?subject=" +
+      (data.rolePosition + " application") +
+      "&body=" +
+      JSONdata;
   };
 
   return (
