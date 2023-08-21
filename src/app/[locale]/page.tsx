@@ -3,6 +3,7 @@ import FormFieldsGroup from "@/components/form/formFieldsGroup";
 import FormSection from "@/components/form/formSection";
 import FormSideBar from "@/components/form/formSideBar";
 import FormTextField from "@/components/form/formTextField";
+import FormTextareaField from "@/components/form/formTextareaField";
 import LocaleSwitcher from "@/components/localeSwitcher";
 import { useTranslations } from "next-intl";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -126,13 +127,11 @@ export default function Home() {
                 {...register("personalDetailsSurname", { required: true })}
                 label={t("form.section.personalDetails.questions.surname")}
               />
-              {/* 
-							//TODO: Complete for textarea field
-							<FormTextareaField
+              <FormTextareaField
                 error={"Please enter a position"}
                 {...register("personalDetailsAddress", { required: true })}
                 label={t("form.section.personalDetails.questions.address")}
-              /> */}
+              />
               <FormTextField
                 error={"Please enter a position"}
                 {...register("personalDetailsPostCode", { required: true })}
