@@ -7,9 +7,30 @@ import FormTextareaField from "@/components/form/formTextareaField";
 import FormToggleField from "@/components/form/formToggleField";
 import LocaleSwitcher from "@/components/localeSwitcher";
 import { useTranslations } from "next-intl";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { z } from "zod";
 
 export default function Home() {
   const t = useTranslations("IndexPage");
+
+  const formSchema = z.object({
+    position: z.string().nonempty({ message: "validation.nonEmpty" }),
+  });
+
+  type FormSchema = z.infer<typeof formSchema>;
+
+  const {
+    handleSubmit,
+    register,
+    watch,
+    formState: { errors },
+  } = useForm<FormSchema>();
+
+  const onSubmit: SubmitHandler<FormSchema> = async (data: FormSchema) => {
+    console.log("Submitted Data: ", data);
+  };
+
+  console.log(watch("position")); // watch input value by passing the name of it
 
   return (
     <main className="p-6 bg-gray-100  items-center justify-center">
@@ -25,6 +46,13 @@ export default function Home() {
             <LocaleSwitcher />
           </div>
         </div>
+
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input defaultValue="test" {...register("position")} />
+
+          <input type="submit" />
+        </form>
+
         <form>
           <FormSection>
             <FormSideBar
