@@ -3,8 +3,6 @@ import FormFieldsGroup from "@/components/form/formFieldsGroup";
 import FormSection from "@/components/form/formSection";
 import FormSideBar from "@/components/form/formSideBar";
 import FormTextField from "@/components/form/formTextField";
-import FormTextareaField from "@/components/form/formTextareaField";
-import FormToggleField from "@/components/form/formToggleField";
 import LocaleSwitcher from "@/components/localeSwitcher";
 import { useTranslations } from "next-intl";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -48,12 +46,6 @@ export default function Home() {
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)}>
-          <input defaultValue="test" {...register("position")} />
-
-          <input type="submit" />
-        </form>
-
-        <form>
           <FormSection>
             <FormSideBar
               title={t("form.section.role.title")}
@@ -61,13 +53,13 @@ export default function Home() {
             />
             <FormFieldsGroup>
               <FormTextField
-                IdAndName="position"
+                error={"Please enter a position"}
+                {...register("position", { required: true })}
                 label={t("form.section.role.questions.position")}
-                required={true}
               />
             </FormFieldsGroup>
           </FormSection>
-          <FormSection>
+          {/*<FormSection>
             <FormSideBar
               title={t("form.section.eligibility.title")}
               paragraph={t("form.section.eligibility.description")}
@@ -136,7 +128,7 @@ export default function Home() {
                 required={true}
               />
             </FormFieldsGroup>
-          </FormSection>
+          </FormSection> */}
           <FormSection>
             <FormSideBar
               title={t("form.section.employment.title")}
