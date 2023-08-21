@@ -3,7 +3,7 @@
     "title": "Application for employment",
     "form": {
       "title": "Application Form",
-      "description": "This is an example application form for WJEC.",
+      "description": "The following form has been set up and hosted as a working example of my ability as a developer. The technology used includes NextJS, Tailwind CSS, react-hook-forms and is written in Typescript. It also shows localisation (Included in this example are English and Welsh) This form is not complete, it is based as an mvp, the possible items to upgrade are: form validation using Zod, create API for the HR team to access applications, this would then allow data to be stored on a database rather than emailed, confirmation emails to be sent to the applicant. Please note, I am sadly not fluent in Welsh and the translation was completed through a translation service, so its precision may not be correct.",
       "section": {
         "role": {
           "title": "Role",
@@ -12,7 +12,7 @@
         },
         "eligibility": {
           "title": "Eligibility",
-          "description": "Your eligibility to work for WJEC.",
+          "description": "Your eligibility to work.",
           "questions": {
             "entitled": "Are you currently legally entitled to work in the country where the job is based?",
             "detail": "If applicable, please detail any restrictions - length of work visa, type of work etc."
@@ -85,6 +85,6 @@
     "locale": "{locale, select, cy {Welsh} en {English} other {Unknown}}"
   },
   "LocaleLayout": {
-    "title": "WJEC"
+    "title": "Application Form"
   }
 }
