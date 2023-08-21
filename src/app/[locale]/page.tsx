@@ -4,12 +4,67 @@ import FormSection from "@/components/form/formSection";
 import FormSideBar from "@/components/form/formSideBar";
 import FormTextField from "@/components/form/formTextField";
 import FormTextareaField from "@/components/form/formTextareaField";
-import FormToggleField from "@/components/form/formToggleField";
 import LocaleSwitcher from "@/components/localeSwitcher";
 import { useTranslations } from "next-intl";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { z } from "zod";
 
 export default function Home() {
   const t = useTranslations("IndexPage");
+
+  const formSchema = z.object({
+    rolePosition: z.string().nonempty({ message: "validation.nonEmpty" }),
+    eligibilityDetails: z.string().nonempty({ message: "validation.nonEmpty" }),
+    personalDetailsTitle: z
+      .string()
+      .nonempty({ message: "validation.nonEmpty" }),
+    personalDetailsForenames: z
+      .string()
+      .nonempty({ message: "validation.nonEmpty" }),
+    personalDetailsSurname: z
+      .string()
+      .nonempty({ message: "validation.nonEmpty" }),
+    personalDetailsAddress: z
+      .string()
+      .nonempty({ message: "validation.nonEmpty" }),
+    personalDetailsPostCode: z
+      .string()
+      .nonempty({ message: "validation.nonEmpty" }),
+    personalDetailsMobile: z
+      .string()
+      .nonempty({ message: "validation.nonEmpty" }),
+    personalDetailsHome: z
+      .string()
+      .nonempty({ message: "validation.nonEmpty" }),
+    personalDetailsWork: z
+      .string()
+      .nonempty({ message: "validation.nonEmpty" }),
+    personalDetailsEmail: z
+      .string()
+      .nonempty({ message: "validation.nonEmpty" })
+      .email({ message: "validation.invalidEmail" }),
+  });
+
+  type FormSchema = z.infer<typeof formSchema>;
+
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm<FormSchema>();
+  //TODO: Place Zod Val;idation here
+
+  const onSubmit: SubmitHandler<FormSchema> = async (data: FormSchema) => {
+    console.log("Submitted Data: ", data);
+    const JSONdata = JSON.stringify(data);
+    window.location.href =
+      "mailto:" +
+      data.personalDetailsEmail +
+      "?subject=" +
+      (data.rolePosition + " application") +
+      "&body=" +
+      JSONdata;
+  };
 
   return (
     <main className="p-6 bg-gray-100  items-center justify-center">
@@ -25,7 +80,8 @@ export default function Home() {
             <LocaleSwitcher />
           </div>
         </div>
-        <form>
+
+        <form onSubmit={handleSubmit(onSubmit)}>
           <FormSection>
             <FormSideBar
               title={t("form.section.role.title")}
@@ -33,9 +89,9 @@ export default function Home() {
             />
             <FormFieldsGroup>
               <FormTextField
-                IdAndName="position"
+                error={"Please enter a position"}
+                {...register("rolePosition", { required: true })}
                 label={t("form.section.role.questions.position")}
-                required={true}
               />
             </FormFieldsGroup>
           </FormSection>
@@ -45,14 +101,15 @@ export default function Home() {
               paragraph={t("form.section.eligibility.description")}
             />
             <FormFieldsGroup>
-              <FormToggleField
+              {/*TODO: Complete for toggle field 
+							 <FormToggleField
                 IdAndName="entitled"
                 label={t("form.section.eligibility.questions.entitled")}
-              />
+              /> */}
               <FormTextField
-                IdAndName="detail"
+                error={"Please enter a position"}
+                {...register("eligibilityDetails", { required: true })}
                 label={t("form.section.eligibility.questions.detail")}
-                required={true}
               />
             </FormFieldsGroup>
           </FormSection>
@@ -63,49 +120,50 @@ export default function Home() {
             />
             <FormFieldsGroup>
               <FormTextField
-                IdAndName="title"
+                error={"Please enter a position"}
+                {...register("personalDetailsTitle", { required: true })}
                 label={t("form.section.personalDetails.questions.title")}
-                required={true}
               />
               <FormTextField
-                IdAndName="forenames"
+                error={"Please enter a position"}
+                {...register("personalDetailsForenames", { required: true })}
                 label={t("form.section.personalDetails.questions.forenames")}
-                required={true}
               />
+
               <FormTextField
-                IdAndName="surname"
+                error={"Please enter a position"}
+                {...register("personalDetailsSurname", { required: true })}
                 label={t("form.section.personalDetails.questions.surname")}
-                required={true}
               />
               <FormTextareaField
-                IdAndName="address"
+                error={"Please enter a position"}
+                {...register("personalDetailsAddress", { required: true })}
                 label={t("form.section.personalDetails.questions.address")}
-                required={true}
               />
               <FormTextField
-                IdAndName="postCode"
+                error={"Please enter a position"}
+                {...register("personalDetailsPostCode", { required: true })}
                 label={t("form.section.personalDetails.questions.postCode")}
-                required={true}
               />
               <FormTextField
-                IdAndName="mobile"
+                error={"Please enter a position"}
+                {...register("personalDetailsMobile", { required: true })}
                 label={t("form.section.personalDetails.questions.mobile")}
-                required={true}
               />
               <FormTextField
-                IdAndName="home"
+                error={"Please enter a position"}
+                {...register("personalDetailsHome", { required: false })}
                 label={t("form.section.personalDetails.questions.home")}
-                required={false}
               />
               <FormTextField
-                IdAndName="work"
+                error={"Please enter a position"}
+                {...register("personalDetailsWork", { required: false })}
                 label={t("form.section.personalDetails.questions.work")}
-                required={false}
               />
               <FormTextField
-                IdAndName="email"
+                error={"Please enter a position"}
+                {...register("personalDetailsEmail", { required: true })}
                 label={t("form.section.personalDetails.questions.email")}
-                required={true}
               />
             </FormFieldsGroup>
           </FormSection>
