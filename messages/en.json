@@ -1,6 +1,7 @@
 {
   "IndexPage": {
     "title": "Application for employment",
+    "description": "An example of an application for employemnt.",
     "form": {
       "title": "Application Form",
       "description": "The following form has been set up and hosted as a working example of my ability as a developer. The technology used includes NextJS, Tailwind CSS, react-hook-forms and is written in Typescript. It also shows localisation (Included in this example are English and Welsh) This form is not complete, it is based as an mvp, the possible items to upgrade are: form validation using Zod, create API for the HR team to access applications, this would then allow data to be stored on a database rather than emailed, confirmation emails to be sent to the applicant. Please note, I am sadly not fluent in Welsh and the translation was completed through a translation service, so its precision may not be correct.",

@@ -1,6 +1,7 @@
 {
   "IndexPage": {
     "title": "Cais am gyflogaeth",
+    "description": "Enghraifft o gais am gyflogaeth.",
     "form": {
       "title": "Ffurflen Gais",
       "description": "Mae'r ffurflen ganlynol wedi'i sefydlu a'i lletya fel enghraifft weithredol o'm gallu fel datblygwr. Mae'r dechnoleg a ddefnyddir yn cynnwys NextJS, Tailwind CSS, ffurflenni adweithio bachyn ac mae wedi'i ysgrifennu mewn Teipysgrif. Mae hefyd yn dangos lleoleiddio (Cymraeg a Saesneg wedi'u cynnwys yn yr enghraifft hon) Nid yw'r ffurflen hon yn gyflawn, mae wedi'i seilio fel mvp, yr eitemau posibl i'w huwchraddio yw: dilysiad ffurflen gan ddefnyddio Zod, creu API i'r tîm AD gael mynediad i gymwysiadau, hyn byddai wedyn yn caniatáu i ddata gael ei storio ar gronfa ddata yn hytrach na'i e-bostio, e-byst cadarnhau i'w hanfon at yr ymgeisydd. Sylwer, yn anffodus, nid wyf yn rhugl yn y Gymraeg a chwblhawyd y cyfieithiad trwy wasanaeth cyfieithu, felly efallai nad yw ei gywirdeb yn gywir.",
