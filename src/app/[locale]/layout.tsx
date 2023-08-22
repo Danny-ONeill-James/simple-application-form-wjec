@@ -35,14 +35,9 @@ export async function generateMetadata({ params: { locale } }: Props) {
 
   return {
     title: t("LocaleLayout.title"),
+    description: t("LocaleLayout.description"),
   };
 }
-
-export const metadata: Metadata = {
-  title: "Simple Application Form",
-  description:
-    "A simple form to provide the data required to apply for a position in an easy way",
-};
 
 export default async function LocaleLayout({
   children,
