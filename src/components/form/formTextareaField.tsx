@@ -4,7 +4,7 @@ interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: React.ReactNode | string;
   error: string;
 }
-export const FormTextField = forwardRef<HTMLInputElement, IInputProps>(
+export const FormTextAreaField = forwardRef<HTMLInputElement, IInputProps>(
   ({ label, error, className, ...props }, ref) => {
     const [value, setValue] = useState("");
 
@@ -34,4 +34,6 @@ export const FormTextField = forwardRef<HTMLInputElement, IInputProps>(
   }
 );
 
-export default FormTextField;
+FormTextAreaField.displayName = "FormTextAreaField";
+
+export default FormTextAreaField;

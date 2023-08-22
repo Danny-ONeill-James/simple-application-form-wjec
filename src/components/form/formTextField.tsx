@@ -34,4 +34,6 @@ export const FormTextField = forwardRef<HTMLInputElement, IInputProps>(
   }
 );
 
+FormTextField.displayName = "FormTextField";
+
 export default FormTextField;
